@@ -1,0 +1,12 @@
+# ML / AI models
+*.h5
+*.pkl
+*.pt
+*.onnx
+
+# Python cache
+__pycache__/
+*.pyc
+
+# Env
+.env

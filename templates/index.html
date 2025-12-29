@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Chatter Box</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:400,700,300">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/material-design-iconic-font/2.1.2/css/material-design-iconic-font.min.css">
+</head>
+<body>
+    <div class="background-overlay"></div>
+
+    <div class="container">
+        <!-- Sidebar (History + Profile) -->
+        <div class="sidebar">
+            <div class="profile">
+                <img src="{{ url_for('static', filename='profile.jpg') }}" alt="Profile">
+                <span>User</span>
+            </div>
+            <h2>Chat History</h2>
+            <ul class="history-list">
+                <li>Conversation 1</li>
+                <li>Conversation 2</li>
+                <li>Conversation 3</li>
+            </ul>
+        </div>
+
+        <!-- Chat Container -->
+        <div class="chat-container">
+            <div class="chat-card">
+                <div class="chat-header">
+                    <h1>Chatter Box</h1>
+                </div>
+                <div class="message-box" id="message-section"></div>
+                <div class="input-area">
+                    <input id="input" type="text" placeholder="Type a message..." autocomplete="off">
+                    <button id="mic" class="mic-button">🎤</button>
+                    <button class="send-button" onclick="sendMessage()">➤</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="{{ url_for('static', filename='script1.js') }}"></script>
+</body>
+</html>
